@@ -1,0 +1,1111 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raqsystem - Sistemas de Recirculação de Água Quente</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="icon" type="image/jpeg" href="/logo.jpg">
+    <link rel="stylesheet" href="/public/css/style.css/min901.css">
+    <link rel="stylesheet" href="/public/css/style.css/max512.css">
+    <link rel="stylesheet" href="/public/css/style.css/max900.css">
+    <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+    <!-- SMART  -->
+    <style>
+        :root {
+            /* --azul: #1a73e8; */
+            --azul: #1ae843;
+            /* --azul-escuro: #0d47a1; */
+            --azul-escuro: #0e9637;
+            --cinza-bg: #f4f4f4;
+            --cinza-card: #fff;
+            --radius: 1.2vw;
+        }
+
+        html {
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: var(--cinza-bg);
+            color: #222;
+            line-height: 1.7;
+        }
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+        a {
+            color: var(--azul);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        /* NAVBAR */
+        .navbar {
+            width: 100%;
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+            /* padding: 0.2vw 0; */
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .nav-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            /* background-color: #11fa05; */
+        }
+        .logo {
+            height: 6vw;
+            max-height: 75px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 2vw;
+        }
+        .nav-links a {
+            color: #1a1a1a;
+            font-size: 1.1vw;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover {
+            color: var(--azul-escuro);
+        }
+        /* HERO */
+        .hero {
+            background: linear-gradient(135deg, var(--azul) 0%, var(--azul-escuro) 100%);
+            padding: 5vw 0 5vw 0;
+            width: 100%;
+        }
+
+        .hero-content {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 4vw;
+        }
+
+        .hero-left {
+            flex: 1 1 45%;
+            min-width: 280px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .hero-left .logo {
+            height: 3vw;
+            max-height: 48px;
+            margin-bottom: 2vw;
+        }
+        .hero-title {
+            font-size: 2.8vw;
+            color: #fff;
+            font-weight: 700;
+            margin: 0 0 1vw 0;
+            line-height: 1.2em;
+        }
+        .hero-desc {
+            font-size: 1.3vw;
+            color: #fff;
+            margin-bottom: 2vw;
+        }
+        .hero-btn {
+            background: #fff;
+            color: var(--azul);
+            border: none;
+            border-radius: 2vw;
+            padding: 1vw 3vw;
+            font-size: 1.2vw;
+            font-weight: 700;
+            box-shadow: 0 4px 16px rgba(26,115,232,0.10);
+            cursor: pointer;
+            transition: background 0.3s, color 0.3s, transform 0.2s;
+            margin-top: 1vw;
+        }
+        .hero-btn:hover {
+            background: var(--azul);
+            color: #fff;
+            transform: scale(1.04);
+        }
+        .hero-right {
+            flex: 1 1 45%;
+            min-width: 280px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .hero-video {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 1vw;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+            overflow: hidden;
+        }
+        /* A EMPRESA */
+        .empresa-section {
+            /* background: #e20c0c; */
+            /* width: 100%; */
+            padding: 5vw 0;
+        }
+        .empresa-content {
+            /* width: 90%; */
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 4vw;
+            flex-wrap: wrap;
+        }
+        .empresa-img-box {
+            flex: 1 1 45%;
+            min-width: 260px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .empresa-img {
+            width: 100%;
+           
+            border-radius: 1vw;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.10);
+        }
+        .empresa-text-box {
+            flex: 1 1 45%;
+            min-width: 260px;
+        }
+        .empresa-title {
+            color: var(--azul);
+            font-size: 2.2vw;
+            font-weight: 700;
+            margin-bottom: 1vw;
+        }
+        .empresa-text {
+            font-size: 1.1vw;
+            color: #222;
+            line-height: 1.8em;
+        }
+        /* PRODUTO */
+        .products,.treino,.obras{
+            background: var(--cinza-bg);
+            width: 100%;
+            padding: 5px;
+            margin-top: 7vh;
+            height: auto;
+            border-top: 2px #ffffff solid;
+        }
+
+        .products-title,.treino-title,.obras-title {
+            color: var(--azul);
+            font-size: 2vw;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 2vw;
+            text-transform: uppercase;
+            line-height: 0.8em;
+        }
+       
+        
+        /* VÍDEOS */
+        .videos {
+            background: #f9f9f9;
+            width: 100%;
+            padding: 10vw 0 10vw 0;
+            border-bottom: .8px #0e9637 solid;
+        }
+        .videos-title {
+            color: var(--azul);
+            font-size: 6vw;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 4vw;
+            text-transform: uppercase;
+        }
+        .video-grid {
+            width: 94%;
+            max-width: 100%;
+            grid-template-columns: 1fr;
+            gap: 5vw;
+            margin: 0 auto;
+        }
+        .video-item {
+            border-radius: 3vw;
+            margin-bottom: 0;
+            
+            padding: 1vw 2vw;
+        }
+        .video-item iframe, .video-item video {
+            border-radius: 2vw;
+            /* height: 50vw; */
+            margin-bottom: 0;
+            width: 100%;
+            display: block;
+        }
+        /* CONTATO */
+        .contact {
+            background: #fff;
+            width: 100%;
+            padding: 10vw 0 10vw 0;
+            /* border-top: .8px #0e9637 solid; */
+        }
+        .contact-title {
+            color: var(--azul);
+            font-size: 3vw;
+            font-weight: 200;
+            text-align: center;
+            margin-bottom: 4vw;
+            text-transform: uppercase;
+        }
+        .contact-info {
+            width: 94%;
+            max-width: 100%;
+            margin: 0 auto;
+            text-align: center;
+            padding: 0 2vw;
+            font-weight: 200;
+        }
+        .contact-item {
+            margin: 4vw 0;
+            font-size: 4vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0vw;
+            font-weight: 200;
+        }
+        .contact-item i {
+            margin-right: 1vw;
+            font-size: 3vw;
+            /* font-weight: 200; */
+        }
+        .contact-item a {
+            font-size: 4vw;
+            /* color:#007bff ; */
+            font-weight: 200;
+            font-size: 3vw;
+        }
+        /* WHATSAPP FLOAT */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+    </style>
+    <!-- MONTA A LISTA -->
+    <style>
+        /* ----------------------------
+        Estilização básica
+        ----------------------------- */
+        .list-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            font-family: Arial, sans-serif;
+        }
+
+        .list-row {
+            display: grid;
+            grid-template-columns: 50px auto auto; /* Define três colunas */
+            align-items: center;
+            gap: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            /* display: flex; */
+        }
+
+        .icon {
+            display: flex;
+            align-items: center;
+            margin-right: 3px;
+            font-size: 24px;
+        }
+
+        .icon img {
+            max-width: 40px;
+            height: auto;
+        }
+
+        .description {
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .hidden-code {
+            text-align: right;
+            font-size: 14px;
+            color: #999;
+            font-weight: bold;
+            display: none; /* Código começa oculto */
+        }
+
+        .list-row:hover {
+           background-color: #e6f7ff; /* Aumenta a visibilidade ao passar o mouse */
+        }
+
+        /* Aumentar o tamanho ao passar o mouse */
+        .icon img:hover {
+        transform: scale(3.0); /* Aumenta 20% do tamanho original */
+        }
+
+        @media (max-width: 768px) {
+            .description {
+              font-size: 14px;
+            }
+        
+            .icon img {
+              max-width: 30px;
+            }
+        }
+    </style>
+    <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+    <!-- PERTINENTE AO MODAL -->
+    <style>
+    /* Estilização básica da página */
+    /* Overlay (fundo escuro do modal) */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      display: none; /* Escondido por padrão */
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Conteúdo do Modal */
+    .modal-container {
+      background: #ffffff;
+      padding: 10px;
+      border-radius: 8px;
+      max-width: 80%;
+      width: 600px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Vídeo em uma div */
+    .video-container {
+      position: relative;
+      width: 100%;
+       /* Proporção de 16:9 */
+      /* padding-top: 56.25%; */
+      background-color: darkcyan;
+    }
+
+    /* Vídeo responsivo */
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+      background-color: chocolate;
+    }
+
+    /* Botão fechar */
+    .close-modal {
+      /* position: absolute; */
+      /* float: right; */
+      top: 10px;
+      left: 15px;
+      font-size: 20px;
+      color: #333;
+      cursor: pointer;
+      background-color:#ffffff;
+    }
+
+    /* Botão abrir modal */
+    .open-modal-btn {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .open-modal-btn:hover {
+      background-color: #0056b3;
+    }
+    </style>
+    <style>
+        /* =============================
+        SLIDERS (Produto & Obras)
+        ============================= */
+        /* Container padrão do slider */
+        .image-slider,
+        #obras .image-sliderObras {
+            position: relative;
+            width: min(92vw, 1000px);
+            height: clamp(320px, 78vh, 820px); /* altura responsiva */
+            margin: 0 auto;
+            background: transparent;             /* fundo da moldura */
+            border-radius: 16px;
+            /*box-shadow: 0 10px 30px rgba(0,0,0,0.08);*/
+            overflow: hidden;
+            padding: 0;
+        }
+
+        #obras img#imageObras {
+            position: absolute;
+            top:0%;
+            left:25%;
+            /*inset: 0;                     /* top/right/bottom/left: 0 */
+            height: 100% !important;
+            width: auto !important;
+            
+            /*object-fit: cover;*/            /* cobre 100% da caixa */
+            /*object-position: center;*/
+            display: block;
+            max-width: none;
+            -webkit-user-drag: none;
+            user-select: none;
+        }
+
+        /* A imagem ocupa todo o espaço reservado pelo aspect-ratio */
+        /*.image-slider img,*/
+        /*
+        .image-sliderObras img {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }*/
+
+        /* Produto: mostra 100% da peça sem cortar */
+        #image {
+        object-fit: contain;
+        background:
+        linear-gradient(180deg, #f9fafb 0%, #f2f4f7 100%);
+        }
+
+        /* Obras: dá look de galeria, preenchendo sem distorcer (pode cortar bordas) */
+        /*
+        #imageObras {
+        object-fit: cover;
+        background: #000; /* melhora contraste em fotos
+        }*/
+
+        /* Botões de navegação (setas) */
+        .arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: clamp(44px, 6vw, 64px);
+        height: clamp(44px, 6vw, 64px);
+        border: none;
+        border-radius: 50%;
+        background: rgba(255,255,255,0.9);
+        backdrop-filter: blur(4px);
+        box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+        cursor: pointer;
+        font-size: clamp(18px, 2.6vw, 26px);
+        line-height: 0;
+        display: grid;
+        place-items: center;
+        transition: transform .15s ease, box-shadow .15s ease, background .2s ease;
+        z-index: 3;
+        }
+
+        .arrow:hover {
+        transform: translateY(-50%) scale(1.05);
+        box-shadow: 0 10px 24px rgba(0,0,0,0.2);
+        background: #fff;
+        }
+
+        /* Posicionamento das setas */
+        #prev, #prevObra { left: 1rem; }
+        #next, #nextObra { right: 1rem; }
+
+        /* Aumenta área clicável no mobile */
+        @media (hover: none) {
+        .arrow { background: rgba(255,255,255,0.95); }
+        }
+
+        /* =============================
+        AJUSTES GERAIS RESPONSIVOS
+        ============================= */
+
+        /* Tablets e abaixo */
+        @media (max-width: 900px) {
+        
+        
+        }
+
+        /* Smartphones pequenos */
+        @media (max-width: 512px) {
+        .nav-container {
+        width: 92%;
+        }
+        .nav-links {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        }
+
+        .videos-title {
+        font-size: clamp(22px, 8vw, 28px);
+        margin-bottom: 6vw;
+        }
+
+        /* Na sessão de vídeos, empilha e dá respiro */
+        .video-grid {
+        width: 92%;
+        margin: 0 auto;
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+        }
+        .video-item {
+        padding: 0 !important;
+        margin: 0 !important;
+        }
+
+        /* Lista de treinamento: melhora toque/legibilidade */
+        .list-container {
+        width: 92%;
+        }
+        .list-row {
+        grid-template-columns: 42px 1fr auto;
+        gap: 8px;
+        padding: 10px 12px;
+        }
+        .icon img { max-width: 32px; }
+        .description { font-size: 15px; }
+        }
+
+        /* =============================
+        MODAL DE VÍDEO (UX)
+        ============================= */
+
+        .modal-overlay {
+        padding: 16px; /* evita colar nas bordas no mobile */
+        }
+
+        .modal-container {
+        width: min(96vw, 720px);
+        max-width: 96vw;
+        border-radius: 12px;
+        }
+
+        .video-container {
+        aspect-ratio: 16/9;    /* garante vídeo responsivo */
+        width: 100%;
+        background: #000;
+        border-radius: 10px;
+        overflow: hidden;
+        }
+
+        .video-container iframe,
+        .video-container video {
+        width: 100%;
+        height: 100%;
+        background: #000;
+        }
+
+        /* Botão fechar com área de toque maior */
+        .close-modal {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 38px;
+        height: 38px;
+        border-radius: 8px;
+        border: 1px solid #e9ecef;
+        }
+
+        .close-modal:active {
+        transform: scale(0.98);
+        }
+
+        /* =============================
+        QUALIDADE DE IMAGEM
+        ============================= */
+        #image, #image-Obras {
+        image-rendering: auto;          /* melhora nitidez em escala */
+        -webkit-user-drag: none;        /* evita arrastar sem querer */
+        user-select: none;
+        }
+
+        .image-sliderObras { outline: 6px solid #fbf9f9; }
+
+</style>
+</head>
+<body>
+    <!-- MODAL -->
+    <title>Modal com Vídeo</title>
+    <!-- Botão para abrir o modal -->
+    <button id="btn_modal" class="open-modal-btn" style="display: none;">Abrir Modal</button>
+    <!-- Modal -->
+    <div id="div-modal" class="modal-overlay">
+        <div class="modal-container" >
+            <span id="btn-closeModal" class="close-modal" >&times;</span>
+            <div class="video-container">                 <!-- Insira aqui o vídeo, pode ser um iframe do YouTube -->
+                <video width="100%" height="auto" controls id="video-passa">
+                    
+                    <source src="" type="video/mp4">
+                    Seu navegador não suporta vídeos aula 04.
+                </video>
+            </div>
+        </div>
+    </div>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container" >
+            <a href="/views/site/smart/index.handlebars">
+                <img src="https://amelia.nyc3.digitaloceanspaces.com/8b68690bf283442dc7a5_logoRaq.jpg" alt="Raqsystem Logo" class="logo">
+            </a>
+            <div class="nav-links">
+                <a href="#inicio">Início</a>
+                <a href="#empresa">Empresa</a>
+                <a href="#produto">Produto</a>
+                <a href="#treina" >Treinamento</a>
+                <a href="#videos">Vídeo</a>
+                <a href="#obras">Obra</a>
+                <a href="#contato">Contato</a>
+            </div>
+        </div>
+    </nav>
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <div class="hero-left">
+                <div class="hero-title">Raqsystem</div>
+                <div class="hero-desc">Soluções inteligentes em sistemas de recirculação de água quente para sua casa ou empresa.</div>
+                <a href="https://wa.me/5527999734960" class="hero-btn" target="_blank">Solicitar Orçamento</a>
+            </div>
+            <div class="hero-right">
+                <div class="hero-video">
+                    <video width="100%" height="auto" controls>
+                        <!-- video 01 -->
+                        <source src="https://amelia.nyc3.digitaloceanspaces.com/24e8ca8ae3fe46892766_video_01.mp4" type="video/mp4">
+                        Seu navegador não suporta vídeos.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- A EMPRESA -->
+    <section class="empresa-section" id="empresa">
+        <div class="empresa-content">
+            <div class="empresa-img-box">
+                <img src="https://amelia.nyc3.digitaloceanspaces.com/c9f4d1f99b73fcb79f6b_chuveiro.jpg" alt="Sistema de Chuveiro Raqsystem" class="empresa-img">
+            </div>
+            <div class="empresa-text-box">
+                <div class="empresa-title"><span style="font-weight: 600">Empresa</span></div>
+                <div class="empresa-text">
+                    A Raqsystem é uma empresa especializada no desenvolvimento e fornecimento de sistemas de recirculação de água quente, com foco em eficiência, sustentabilidade e conforto para residências, comércios e indústrias. Nossa missão é oferecer soluções inteligentes que eliminam o desperdício de água e proporcionam acesso imediato à água quente, promovendo economia e praticidade no dia a dia.<br><br>
+                    Com uma equipe técnica altamente capacitada e em constante atualização, buscamos inovação contínua para entregar produtos confiáveis, de fácil instalação e excelente custo-benefício. Ao longo dos anos, conquistamos a confiança de nossos clientes com um atendimento comprometido, suporte especializado e soluções sob medida para cada necessidade.
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- PRODUTO -->
+    <section class="products" id="produto" >
+        <div class="products-title" ><span style="font-weight: 600">Produto</span></div>
+        <div class="image-slider" >
+                <button id="prev" class="arrow" >&#9664;</button> <!-- Setinha "Esquerda" -->
+                  <img id="image" src="https://amelia.nyc3.digitaloceanspaces.com/fccf51ae1ae17c22391f_bomba270.jpg" alt="Imagem Atual" >
+                <button id="next" class="arrow" >&#9654;</button> <!-- Setinha "Direita" -->
+        </div>
+    </section>
+    <!-- TREINAMENTO --> 
+    <section class="treino" id="treina" style="height:auto;">
+        <div class="treino-title" ><span style="font-weight: 600;">Treinamento</span></div>
+        
+            <div class="list-container">
+                <div class="list-row" style="display: flex; align-items: center; gap: 10px;">
+                    <i class="icon">
+                        <img src="https://amelia.nyc3.digitaloceanspaces.com/88a635f3611ab75f7319_botton.png" 
+                             style="margin-right:5px;width: 40px;height: auto;">
+                    </i> 
+                    <span class="description">Caixa abaixo do aquecedor</span> 
+                    <span class="hidden-code"></span> 
+                </div>
+                <div class="list-row">
+                    <i class="icon">
+                          <img src="https://amelia.nyc3.digitaloceanspaces.com/4e06e7146f90573ec840_branco.png" 
+                             style="margin-right:5px;width: 40px;height: auto;">
+                    </i>
+                    <span class="description">Caixa lado esquerdo do aquecedor(pentende)</span>
+                    <span class="hidden-code"></span>
+                </div>
+                <div class="list-row">
+                    <i class="icon">
+                         <img src="https://amelia.nyc3.digitaloceanspaces.com/4e06e7146f90573ec840_branco.png" 
+                             style="margin-right:5px;width: 40px;height: auto;">    
+                    </i>
+                    <span class="description">Caixa lado direito aquecedor (pentende)</span>
+                    <span class="hidden-code"></span>
+                </div>
+                <div class="list-row">
+                    <i class="icon">
+                       <img src="https://amelia.nyc3.digitaloceanspaces.com/29b05505156b14e312d2_teto.png" 
+                             style="margin-right:5px;width: 40px;height: auto;">
+                    </i>
+                    <span class="description">Caixa no teto</span>
+                    <span class="hidden-code"></span>
+                </div>
+                <div class="list-row">
+                    <i class="icon">
+                       <img src="https://amelia.nyc3.digitaloceanspaces.com/77123cdaaa4cab17d731_1sistema.png" 
+                             style="margin-right:5px;width: 40px;height: auto;">
+                    </i>
+                    <span class="description">Sistema com 1 aquecedor</span>
+                    <span class="hidden-code"></span>
+                </div>
+                <div class="list-row">
+                    <i class="icon">
+                          <img src="https://amelia.nyc3.digitaloceanspaces.com/ef61d08f8b0d1050624a_2sistema.png" 
+                             style="margin-right:5px;width: 40px;height: auto;">
+                    </i>
+                    <span class="description">Sistema com 2 aquecedores</span>
+                    <span class="hidden-code"></span>
+                </div>
+                <div class="list-row">
+                    <i class="icon">
+                       <img src="https://amelia.nyc3.digitaloceanspaces.com/179bccd4a2a8680cc45a_error.png" 
+                             style="margin-right:5px;width: 40px;height: auto;">    
+                    </i>
+                    <span class="description">Error na recirculação</span>
+                    <span class="hidden-code"></span>
+                </div>
+                <div class="list-row">
+                    <i class="icon">
+                       <img src="https://amelia.nyc3.digitaloceanspaces.com/25ed3fea672650cb09ca_eletrica.png" 
+                             style="margin-right:5px;width: 40px;height: auto;">    
+                    </i>
+                    <span class="description">Elétrica</span>
+                    <span class="hidden-code"></span>
+                </div>
+          </div>
+        </div>
+    </section>
+    <!-- VÍDEOS -->
+    <section class="videos" id="videos" style="height: auto;">
+        <div class="videos-title"><span style="font-weight: 600;background-color:transparent;">Vídeos</span></div>
+        <div class="video-grid" style="width: 100vw;display: flex;flex-direction: row;justify-content: space-between;">
+            <div class="video-item" style="background-color:transparent;">
+                  <video width="100%" height="auto" controls>
+                        <!-- video 02 -->
+                        <source src="https://amelia.nyc3.digitaloceanspaces.com/770dcd8891f6fec7537b_video_02.mp4" type="video/mp4">
+                        Seu navegador não suporta vídeos.
+                   </video>
+            </div>
+            <div class="video-item">
+                  <video width="100%" height="auto" controls>
+                        <!-- video 01 -->
+                        <source src="https://amelia.nyc3.digitaloceanspaces.com/b553b4ce40ce67dcda2d_eletrica_jorg.mp4" type="video/mp4">
+                        Seu navegador não suporta vídeos.
+                  </video>
+            </div>
+        </div>
+    </section>
+     <!-- OBRA -->
+    <section class="obras" id="obras" >
+        <div class="obras-title" ><span style="font-weight: 600;">Obras</span></div>
+        <div class="image-sliderObras"  >
+                <button id="prevObra" class="arrow" >&#9664;</button> <!-- Setinha "Esquerda -->
+                  <img id="imageObras" src="https://amelia.nyc3.digitaloceanspaces.com/a4db17056c655bb68668_DesiderioPerim270350.jpg" alt="Imagem Atual" >
+                <button id="nextObra" class="arrow">&#9654;</button> 
+        </div>
+    </section>
+    <!-- CONTATO -->
+    <section class="contact" id="contato">
+        <div class="contact-title">Contato</div>
+        <div class="contact-info">
+            <div class="contact-item" >
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:armacao.comercial@terra.com.br">armacao.comercial@terra.com.br</a>
+            </div>
+            <div class="contact-item">
+                <i class="fab fa-whatsapp"></i>
+                <a href="https://wa.me/5527999734960">(27) 99973-4960</a>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <a href="tel:+552733253167">(27) 3325-3167</a>
+            </div>
+        </div>
+    </section>
+    <!-- WHATSAPP FLOAT -->
+    <a href="https://wa.me/5527999734960" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
+    <div id="lightboxOverlay" tabindex="-1" class="lightboxOverlay" style="display: none;"></div>
+    <div id="lightbox" tabindex="-1" class="lightbox" style="display: none;">
+        <div class="lb-outerContainer">
+            <div class="lb-container">
+                <img class="lb-image" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="">
+                <div class="lb-nav">
+                    <a class="lb-prev" aria-label="Previous image" href=""></a>
+                    <a class="lb-next" aria-label="Next image" href="">
+                    </a>
+                </div>
+                <div class="lb-loader">
+                    <a class="lb-cancel"></a>
+                </div>
+                </div>
+        </div>
+        <div class="lb-dataContainer">
+            <div class="lb-data">
+                <div class="lb-details">
+                    <span class="lb-caption"></span>
+                    <span class="lb-number"></span>
+                </div>
+                <div class="lb-closeContainer">
+                    <a class="lb-close"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+<!-- MOVIMENTA AS IMAGENS DO PRODUTO -->
+<script>
+    // Lista de imagens
+    const images = [
+        "https://amelia.nyc3.digitaloceanspaces.com/0a96d7a7d789ed503993_colocado.jpg",
+        "https://amelia.nyc3.digitaloceanspaces.com/9f1088eee79d3c5f2b61_largura.jpg",
+        "https://amelia.nyc3.digitaloceanspaces.com/9d715ac90fe57ae4a83d_lateral270.jpg",
+        "https://amelia.nyc3.digitaloceanspaces.com/fccf51ae1ae17c22391f_bomba270.jpg",
+        "https://amelia.nyc3.digitaloceanspaces.com/01_1760378651057_Frente_-_Centralizada.png",
+        "https://amelia.nyc3.digitaloceanspaces.com/01_1760379110586_Imagem_inferior_angular.png",
+        "https://amelia.nyc3.digitaloceanspaces.com/01_1760379324151_Imagem_inferior.png",
+        "https://amelia.nyc3.digitaloceanspaces.com/01_1760379782969_Imagem_Montada_-_Aberta___Fechada.png",
+        "https://amelia.nyc3.digitaloceanspaces.com/01_1760379925878_Lateral_Com_tampa.png",
+    ];
+
+    // const images = ["imagem1.jpg", "imagem2.jpg", "imagem3.jpg"];
+    let currentIndex = 0;
+
+    const imgElement = document.getElementById("image");
+    const prevButton = document.getElementById("prev");
+    const nextButton = document.getElementById("next");
+
+    function updateImage() {
+       imgElement.src = images[currentIndex];
+    }
+
+    // Clique na setinha esquerda
+    prevButton.addEventListener("click", () => {
+        currentIndex = currentIndex > 0 ? currentIndex - 1 : images.length - 1;
+        updateImage();
+    });
+
+    // Clique na setinha direita
+    nextButton.addEventListener("click", () => {
+        currentIndex = currentIndex < images.length - 1 ? currentIndex + 1 : 0;
+        updateImage();
+    });
+</script>
+<!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+<!-- CONTROLA O CLICK SOBRE A LISTA DE VÍDEOS  -->
+<script>
+    // Seleciona todos os elementos que possuem o código oculto
+const rows = document.querySelectorAll(".list-row");
+
+rows.forEach((row) => {
+  // Clique no item (ou na descrição)
+  row.addEventListener("click", () => {
+    const hiddenCode = row.querySelector(".hidden-code");
+    if (hiddenCode.style.display === "none" || hiddenCode.style.display === "") {
+      hiddenCode.style.display = "block"; // Mostra o código
+      if (i=0){
+
+      }
+    } else {
+      hiddenCode.style.display = "none"; // Oculta de novo
+    }
+  });
+
+  // Seleciona todas as linhas da lista em um NodeList
+  const rows = document.querySelectorAll(".list-row");
+
+  // Adiciona um evento de clique a cada linha com base no índice
+  for (let i = 0; i < rows.length; i++) {
+     rows[i].addEventListener("click", () => {
+            // Localiza o código oculto da linha pelo índice
+            const hiddenCode = rows[i].querySelector(".hidden-code");
+
+            // Alterna a visibilidade do código
+            if (hiddenCode.style.display === "none" || hiddenCode.style.display === "") {
+               hiddenCode.style.display = "block"; // Mostra o código
+            } else {
+               hiddenCode.style.display = "none"; // Oculta o código novamente
+            }
+
+            // console.log(`Clicou na linha de índice: ${i}`);
+             // Opcional: exibe o índice no console
+            let imgrow;
+            // <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+            if (i==0){
+                //  caixa bottom
+                document.getElementById('btn_modal').click();
+                imgrow="https://amelia.nyc3.digitaloceanspaces.com/f400ff570276b1e8bf8c_03%20-%20CboxBottom.mp4";
+                document.getElementById('video-passa').src=imgrow;
+            }else if(i==1){
+                //  caixa left
+               // document.getElementById('btn_modal').click();
+                imgrow="";
+                document.getElementById('video-passa').src=imgrow;
+            }else if(i==2){
+                // caixa right
+               // document.getElementById('btn_modal').click();
+                imgrow="";
+                document.getElementById('video-passa').src=imgrow;
+            }else if(i==3){
+                // caixa teto
+                document.getElementById('btn_modal').click();
+                imgrow='https://amelia.nyc3.digitaloceanspaces.com/19e007bdbe146ccfced8_04%20-%20CboxTeto.mp4'
+                document.getElementById('video-passa').src=imgrow;
+            }else if(i==4){
+                // 1 sistema
+                document.getElementById('btn_modal').click();
+                imgrow='https://amelia.nyc3.digitaloceanspaces.com/c50d5da5f3b9f388d7c0_05%20-%201sistema.mp4'
+                document.getElementById('video-passa').src=imgrow;
+            }else if(i==5){
+                // dois sistema 
+                document.getElementById('btn_modal').click();
+                imgrow='https://amelia.nyc3.digitaloceanspaces.com/f484fe7363eb0abb0de7_07%20-%202sistema.mp4'
+                document.getElementById('video-passa').src=imgrow;
+            }else if(i==6){
+               // error  
+               document.getElementById('btn_modal').click();
+               imgrow='https://amelia.nyc3.digitaloceanspaces.com/e88b3a9be7d8b434b2f3_06%20-%20Erro%20retorno.mp4'
+               document.getElementById('video-passa').src=imgrow;
+            }else if(i==7){
+               // elétrica  
+               document.getElementById('btn_modal').click();
+               imgrow='https://amelia.nyc3.digitaloceanspaces.com/f50843060067a542ed11_08%20-%20Eletrica.mp4'
+               document.getElementById('video-passa').src=imgrow;
+            }
+            
+  });
+}
+});
+</script>
+<!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+<!-- ??????????????????????????????????????? -->
+<!-- MOSTRA O MODAL -->
+<script>
+    // Captura os elementos do DOM
+    const openModalBtn = document.getElementById('btn_modal');
+    const modalOverlay = document.querySelector('.modal-overlay');
+    const closeModalBtn = document.getElementById('btn-closeModal');
+    // console.log('1000',openModalBtn);
+    // Evento para abrir o modal
+    openModalBtn.addEventListener('click', (event) => {
+       modalOverlay.style.display = 'flex';
+    });
+
+    // Evento para fechar o modal
+    closeModalBtn.addEventListener('click', (event) => {
+       modalOverlay.style.display = 'none';
+    });
+
+    // Fechar o modal ao clicar fora
+    modalOverlay.addEventListener('click', (event) => {
+      if (event.target === modalOverlay) {
+        modalOverlay.style.display = 'none';
+      }
+    });
+</script>
+<!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+<!-- MOSTRA AS OBRAS -->
+<script>
+    // Lista de imagens
+    const imagesObra = [
+        "https://amelia.nyc3.digitaloceanspaces.com/d6dd9c3b739f2563558a_RealResidence.jpg",
+        "https://amelia.nyc3.digitaloceanspaces.com/d10502d99b4a8ee2667b_IlhaVitoria.jpg",
+        "https://amelia.nyc3.digitaloceanspaces.com/a4db17056c655bb68668_DesiderioPerim270350.jpg",
+        "https://amelia.nyc3.digitaloceanspaces.com/44372d27e6e39b7f550b_IlhaTrindade.jpg",
+        "https://amelia.nyc3.digitaloceanspaces.com/2288e0e86659ab62ec25_singular.jpg",
+        "https://amelia.nyc3.digitaloceanspaces.com/0844ae8b0cef227ca010_THEVIEWS.jpg",
+    ];
+
+    // const images = ["imagem1.jpg", "imagem2.jpg", "imagem3.jpg"];
+    let currentIndexObra = 0;
+
+    const imgElementObra = document.getElementById("imageObras");
+    const prevButtonObra = document.getElementById("prevObra");
+    const nextButtonObra = document.getElementById("nextObra");
+    // console.log(prevButtonObra)
+    function updateImageObra(currentIndexObra) {
+       imgElementObra.src = imagesObra[currentIndexObra];
+    }
+
+    // Clique na setinha esquerda
+    prevButtonObra.addEventListener("click", () => {
+        currentIndexObra = currentIndexObra > 0 ? currentIndexObra - 1 : imagesObra.length - 1;
+        updateImageObra(currentIndexObra);
+    });
+
+    // Clique na setinha direita
+    nextButtonObra.addEventListener("click", () => {
+        currentIndexObra = currentIndexObra < imagesObra.length - 1 ? currentIndexObra + 1 : 0;
+        updateImageObra(currentIndexObra);
+    });
+</script>
+  <script>
+(function swipeSupport(){
+  function addSwipe(el, onLeft, onRight){
+    let x0 = null, t0 = 0;
+    el.addEventListener('touchstart', e => {
+      x0 = e.touches[0].clientX; t0 = Date.now();
+    }, {passive:true});
+    el.addEventListener('touchend', e => {
+      if (x0 === null) return;
+      const dx = e.changedTouches[0].clientX - x0;
+      const dt = Date.now() - t0;
+      if (dt < 500 && Math.abs(dx) > 40){
+        if (dx < 0) onLeft && onLeft();
+        else onRight && onRight();
+      }
+      x0 = null;
+    });
+  }
+  const prod = document.querySelector('.image-slider');
+  const obras = document.querySelector('.image-sliderObras');
+  if (prod) addSwipe(prod, () => document.getElementById('next')?.click(), () => document.getElementById('prev')?.click());
+  if (obras) addSwipe(obras, () => document.getElementById('nextObra')?.click(), () => document.getElementById('prevObra')?.click());
+})();
+</script>

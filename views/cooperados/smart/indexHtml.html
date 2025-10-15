@@ -1,0 +1,646 @@
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raqsystem - Sistemas de Recirculação de Água Quente</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="icon" type="image/jpeg" href="arquivos/logo.jpg">
+    <style>
+        :root {
+            --azul: #1a73e8;
+            --azul-escuro: #0d47a1;
+            --cinza-bg: #f4f4f4;
+            --cinza-card: #fff;
+            --radius: 1.2vw;
+        }
+        html {
+            font-size: 16px;
+        }
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: var(--cinza-bg);
+            color: #222;
+            line-height: 1.7;
+        }
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+        a {
+            color: var(--azul);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        /* NAVBAR */
+        .navbar {
+            width: 100%;
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+            padding: 0.2vw 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .nav-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo {
+            height: 6vw;
+            max-height: 75px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 2vw;
+        }
+        .nav-links a {
+            color: #1a1a1a;
+            font-size: 1.1vw;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover {
+            color: var(--azul-escuro);
+        }
+        /* HERO */
+        .hero {
+            background: linear-gradient(135deg, var(--azul) 0%, var(--azul-escuro) 100%);
+            padding: 5vw 0 5vw 0;
+            width: 100%;
+        }
+        .hero-content {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 4vw;
+        }
+        .hero-left {
+            flex: 1 1 45%;
+            min-width: 280px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .hero-left .logo {
+            height: 3vw;
+            max-height: 48px;
+            margin-bottom: 2vw;
+        }
+        .hero-title {
+            font-size: 2.8vw;
+            color: #fff;
+            font-weight: 700;
+            margin: 0 0 1vw 0;
+            line-height: 1.2em;
+        }
+        .hero-desc {
+            font-size: 1.3vw;
+            color: #fff;
+            margin-bottom: 2vw;
+        }
+        .hero-btn {
+            background: #fff;
+            color: var(--azul);
+            border: none;
+            border-radius: 2vw;
+            padding: 1vw 3vw;
+            font-size: 1.2vw;
+            font-weight: 700;
+            box-shadow: 0 4px 16px rgba(26,115,232,0.10);
+            cursor: pointer;
+            transition: background 0.3s, color 0.3s, transform 0.2s;
+            margin-top: 1vw;
+        }
+        .hero-btn:hover {
+            background: var(--azul);
+            color: #fff;
+            transform: scale(1.04);
+        }
+        .hero-right {
+            flex: 1 1 45%;
+            min-width: 280px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .hero-video {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 1vw;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+            overflow: hidden;
+        }
+        /* A EMPRESA */
+        .empresa-section {
+            background: #fff;
+            width: 100%;
+            padding: 5vw 0;
+        }
+        .empresa-content {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 4vw;
+            flex-wrap: wrap;
+        }
+        .empresa-img-box {
+            flex: 1 1 45%;
+            min-width: 260px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .empresa-img {
+            width: 100%;
+           
+            border-radius: 1vw;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.10);
+        }
+        .empresa-text-box {
+            flex: 1 1 45%;
+            min-width: 260px;
+        }
+        .empresa-title {
+            color: var(--azul);
+            font-size: 2.2vw;
+            font-weight: 700;
+            margin-bottom: 1vw;
+        }
+        .empresa-text {
+            font-size: 1.1vw;
+            color: #222;
+            line-height: 1.8em;
+        }
+        /* PRODUTO */
+        .products {
+            background: var(--cinza-bg);
+            width: 100%;
+            padding: 5vw 0;
+        }
+        .products-title {
+            color: var(--azul);
+            font-size: 2vw;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 2vw;
+            text-transform: uppercase;
+        }
+        .product-grid {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 2vw;
+        }
+        .product-item {
+            background: #fff;
+            border-radius: 1vw;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .product-item img {
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+            border-radius: 1vw;
+            transition: transform 0.3s;
+        }
+        .product-item:hover {
+            transform: scale(1.04);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.13);
+        }
+        /* VÍDEOS */
+        .videos {
+            background: #f9f9f9;
+            width: 100%;
+            padding: 10vw 0 10vw 0;
+        }
+        .videos-title {
+            color: var(--azul);
+            font-size: 6vw;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 4vw;
+            text-transform: uppercase;
+        }
+        .video-grid {
+            width: 94%;
+            max-width: 100%;
+            grid-template-columns: 1fr;
+            gap: 5vw;
+            margin: 0 auto;
+        }
+        .video-item {
+            border-radius: 3vw;
+            margin-bottom: 0;
+            
+            padding: 1vw 2vw;
+        }
+        .video-item iframe, .video-item video {
+            border-radius: 2vw;
+            height: 75vw;
+            margin-bottom: 0;
+            width: 100%;
+            display: block;
+        }
+        /* CONTATO */
+        .contact {
+            background: #fff;
+            width: 100%;
+            padding: 10vw 0 10vw 0;
+        }
+        .contact-title {
+            color: var(--azul);
+            font-size: 6vw;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 4vw;
+            text-transform: uppercase;
+        }
+        .contact-info {
+            width: 94%;
+            max-width: 100%;
+            margin: 0 auto;
+            text-align: center;
+            padding: 0 2vw;
+        }
+        .contact-item {
+            margin: 4vw 0;
+            font-size: 4vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0vw;
+        }
+        .contact-item i {
+            margin-right: 1vw;
+            font-size: 5vw;
+        }
+        .contact-item a {
+            font-size: 4vw;
+        }
+        /* WHATSAPP FLOAT */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+        /* MEDIA QUERIES */
+        @media (max-width: 900px) {
+            .navbar {
+                padding: 2vw 0;
+            }
+            .nav-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 1.5vw;
+            }
+            .nav-links {
+                gap: 4vw;
+                justify-content: center;
+            }
+            .logo {
+                height: 32px;
+                max-width: 60%;
+                margin-bottom: 1vw;
+            }
+            .hero-content, .empresa-content, .product-grid, .video-grid, .contact-info {
+                width: 98%;
+                max-width: 100%;
+            }
+            .hero-content, .empresa-content {
+                flex-direction: column;
+                gap: 2vw;
+            }
+            .hero-left, .hero-right, .empresa-img-box, .empresa-text-box {
+                max-width: 100%;
+                min-width: 0;
+                width: 100%;
+            }
+            .hero-title, .empresa-title, .products-title, .videos-title, .contact-title {
+                font-size: 4vw;
+            }
+            .hero-desc, .empresa-text {
+                font-size: 2.5vw;
+            }
+            .product-item img, .video-item iframe, .video-item video {
+                height: 32vw;
+            }
+        }
+        @media (max-width: 512px) {
+            .navbar {
+                padding: 4vw 0 2vw 0;
+            }
+            .nav-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 2vw;
+            }
+            .nav-links {
+                gap: 6vw;
+                font-size: 4vw;
+            }
+            .nav-links a {
+                font-size: 3vw;
+            }
+            .logo {
+                height: 94px;
+                max-width: 80%;
+                margin-bottom: 2vw;
+            }
+            .hero {
+                padding: 10vw 4vw 8vw 4vw;
+            }
+            .hero-content {
+                flex-direction: column-reverse;
+                align-items: center;
+                gap: 4vw;
+            }
+            .hero-left, .hero-right {
+                align-items: center;
+                text-align: center;
+            }
+            .hero-title {
+                font-size: 7vw;
+                margin-top: 2vw;
+            }
+            .hero-desc {
+                font-size: 4vw;
+                margin-bottom: 5vw;
+            }
+            .hero-btn {
+                font-size: 4vw;
+                padding: 3vw 8vw;
+                margin-bottom: 5vw;
+            }
+            .product-item img, .video-item iframe, .video-item video {
+                height: 40vw;
+            }
+            .empresa-section {
+                padding: 10vw 4vw 8vw 4vw;
+            }
+            .empresa-content {
+                flex-direction: column;
+                align-items: center;
+                gap: 5vw;
+                width: 100%;
+                max-width: 100%;
+            }
+            .empresa-img-box {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                margin-bottom: 4vw;
+            }
+            .empresa-img {
+                max-width: 95vw;
+                border-radius: 2vw;
+                margin-bottom: 0;
+            }
+            .empresa-text-box {
+                width: 100%;
+                padding: 0 2vw;
+            }
+            .empresa-title {
+                font-size: 6vw;
+                margin-bottom: 2vw;
+                text-align: left;
+            }
+            .empresa-text {
+                font-size: 4vw;
+                padding-bottom: 2vw;
+            }
+            .products {
+                padding: 10vw 4vw 8vw 4vw;
+            }
+            .products-title {
+                font-size: 6vw;
+                margin-bottom: 4vw;
+            }
+            .product-grid {
+                width: 100%;
+                max-width: 100%;
+                grid-template-columns: 1fr;
+                gap: 5vw;
+                margin: 0 auto;
+            }
+            .product-item {
+                border-radius: 3vw;
+                margin-bottom: 0;
+                box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+            }
+            .product-item img {
+                border-radius: 3vw;
+                height: 125vw;
+                margin-bottom: 0;
+            }
+            .videos-title {
+                font-size: 6vw;
+                margin-bottom: 2vw;
+            }
+            .contact-title {
+                font-size: 6vw;
+                margin-bottom: 2vw;
+            }
+        }
+        @media (min-width: 901px) {
+            .videos-title {
+                font-size: 2vw;
+                margin-bottom: 2vw;
+            }
+            .video-grid {
+                width: 50%;
+                max-width: 600px;
+                margin: 0 auto;
+                grid-template-columns: 1fr;
+                gap: 2vw;
+            }
+            .video-item iframe, .video-item video {
+                height: 320px;
+                border-radius: 1vw;
+            }
+            .contact-title {
+                font-size: 2vw;
+                margin-bottom: 2vw;
+            }
+            .contact-info {
+                width: 40%;
+                max-width: 500px;
+                margin: 0 auto;
+                padding: 0;
+            }
+            .contact-item {
+                font-size: 1.3vw;
+                margin: 2vw 0;
+            }
+            .contact-item i {
+                font-size: 2vw;
+            }
+            .contact-item a {
+                font-size: 1.3vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html"><img src="https://drive.google.com/file/d/1YyGWoqlf9B8OKlsClvROafAMtNslmLVA/view?usp=drive_link" alt="Raqsystem Logo" class="logo"></a>
+            <div class="nav-links">
+                <a href="#inicio">Início</a>
+                <a href="#empresa">A Empresa ?Z</a>
+                <a href="#produto">O Produto</a>
+                <a href="#videos">Vídeos</a>
+                <a href="#contato">Contato</a>
+            </div>
+        </div>
+    </nav>
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <div class="hero-left">
+                
+                <div class="hero-title">Raqsystem XZW</div>
+                <div class="hero-desc">Soluções inteligentes em sistemas de recirculação de água quente para sua casa ou empresa.</div>
+                <a href="https://wa.me/5527999734960" class="hero-btn" target="_blank">Solicitar Orçamento</a>
+            </div>
+            <div class="hero-right">
+                <div class="hero-video">
+                    <video width="100%" controls="">
+                        <source src="https://drive.google.com/file/d/1jLP-GUVhtoChZc6UEUsd9FGJxxy7aUAh/view?usp=drive_link" type="video/mp4">
+                        Seu navegador não suporta o elemento de vídeo.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- A EMPRESA -->
+    <section class="empresa-section" id="empresa">
+        <div class="empresa-content">
+            <div class="empresa-img-box">
+                <img src="arquivos/chuveiro.jpg" alt="Sistema de Chuveiro Raqsystem" class="empresa-img">
+            </div>
+            <div class="empresa-text-box">
+                <div class="empresa-title">A Empresa</div>
+                <div class="empresa-text">
+                    A Raqsystem é uma empresa especializada no desenvolvimento e fornecimento de sistemas de recirculação de água quente, com foco em eficiência, sustentabilidade e conforto para residências, comércios e indústrias. Nossa missão é oferecer soluções inteligentes que eliminam o desperdício de água e proporcionam acesso imediato à água quente, promovendo economia e praticidade no dia a dia.<br><br>
+                    Com uma equipe técnica altamente capacitada e em constante atualização, buscamos inovação contínua para entregar produtos confiáveis, de fácil instalação e excelente custo-benefício. Ao longo dos anos, conquistamos a confiança de nossos clientes com um atendimento comprometido, suporte especializado e soluções sob medida para cada necessidade.
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- PRODUTO -->
+    <section class="products" id="produto">
+        <div class="products-title">O Produto</div>
+        <div class="product-grid">
+            <a href="arquivos/sistema.jpg" data-lightbox="sistema" class="product-item">
+                <img src="arquivos/sistema.jpg" alt="Sistema Raqsystem 1">
+            </a>
+            <a href="arquivos/sistema 2.jpg" data-lightbox="sistema" class="product-item">
+                <img src="arquivos/sistema 2.jpg" alt="Sistema Raqsystem 2">
+            </a>
+            <a href="arquivos/sistema 3.jpg" data-lightbox="sistema" class="product-item">
+                <img src="arquivos/sistema 3.jpg" alt="Sistema Raqsystem 3">
+            </a>
+        </div>
+    </section>
+    <!-- VÍDEOS -->
+    <section class="videos" id="videos">
+        <div class="videos-title">Vídeos</div>
+        <div class="video-grid">
+            <div class="video-item">
+                <iframe src="https://www.youtube.com/embed/4v9kbgDbrqM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+            </div>
+            <div class="video-item">
+                <video width="100%" controls="">
+                    <source src="https://drive.google.com/file/d/1jLP-GUVhtoChZc6UEUsd9FGJxxy7aUAh/view?usp=drive_link" type="video/mp4">
+                    Seu navegador não suporta o elemento de vídeo.
+                </video>
+            </div>
+        </div>
+    </section>
+    <!-- CONTATO -->
+    <section class="contact" id="contato">
+        <div class="contact-title">Contato</div>
+        <div class="contact-info">
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:armacao.comercial@terra.com.br">armacao.comercial@terra.com.br</a>
+            </div>
+            <div class="contact-item">
+                <i class="fab fa-whatsapp"></i>
+                <a href="https://wa.me/5527999734960">(27) 99973-4960</a>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <a href="tel:+552733253167">(27) 3325-3167</a>
+            </div>
+        </div>
+    </section>
+    <!-- WHATSAPP FLOAT -->
+    <a href="https://wa.me/5527999734960" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
+ <div id="lightboxOverlay" tabindex="-1" class="lightboxOverlay" style="display: none;">
+     </div><div id="lightbox" tabindex="-1" class="lightbox" style="display: none;">
+    <div class="lb-outerContainer">
+        <div class="lb-container">
+            <img class="lb-image" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="">
+            <div class="lb-nav">
+                <a class="lb-prev" aria-label="Previous image" href=""></a>
+                <a class="lb-next" aria-label="Next image" href="">
+                </a>
+            </div>
+            <div class="lb-loader">
+                <a class="lb-cancel"></a>
+            </div>
+            </div></div>
+            <div class="lb-dataContainer">
+                <div class="lb-data">
+                    <div class="lb-details">
+                        <span class="lb-caption"></span>
+                        <span class="lb-number"></span>
+                    </div>
+                    <div class="lb-closeContainer">
+                        <a class="lb-close"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>

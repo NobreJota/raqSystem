@@ -1,0 +1,163 @@
+     @media (min-width: 901px) {
+             .nav-container {
+                background-color:transparent;
+             }
+            .videos-title {
+                font-size: 2vw;
+                margin-bottom: 2vw;
+            }
+            .video-grid {
+                width: 50%;
+                max-width: 600px;
+                margin: 0 auto;
+                grid-template-columns: 1fr;
+                gap: 2vw;
+            }
+            .video-item iframe, .video-item video {
+                height: 320px;
+                border-radius: 1vw;
+            }
+            .contact-title {
+                font-size: 2vw;
+                margin-bottom: 2vw;
+            }
+            .contact-info {
+                width: 40%;
+                max-width: 500px;
+                margin: 0 auto;
+                padding: 0;
+            }
+            .contact-item {
+                font-size: 1.3vw;
+                margin: 2vw 0;
+            }
+            .contact-item i {
+                font-size: 2vw;
+            }
+            .contact-item a {
+                font-size: 1.3vw;
+            }
+        }
+
+         #image {
+            max-width: 100%; /* Imagem ocupa no máximo todo o espaço disponível */
+            height: auto; /* Mantém a proporção da imagem */
+            display: block; /* Remove espaços brancos ao redor da imagem */
+            margin: auto;
+            border-radius: 6px;
+            width:25%;
+       }
+
+       #imageObra {
+            max-width: 100%; /* Imagem ocupa no máximo todo o espaço disponível */
+            height: auto; /* Mantém a proporção da imagem */
+            display: block; /* Remove espaços brancos ao redor da imagem */
+            margin: auto;
+            border-radius: 6px;
+            width:25%;
+       }
+
+       .image-slider {
+            aspect-ratio: 16 / 9; /* Ajusta a proporção para manter um tipo de frame */
+            width: 60vw; /* Ajusta a largura */
+            height: auto;
+            max-width: 100%; /* Nunca ultrapassa o tamanho da tela */
+            margin: auto;
+            /* overflow: hidden; */
+            position: relative;
+            background:#333; 
+            /* Adiciona fundo para verificar limites */
+            display: flex;
+            flex-direction: row;
+            object-fit: cover; /* Ajusta o conteúdo para preencher o espaço sem distorção */ 
+            overflow: hidden; /* Evita que imagens maiores saiam do contêiner */
+        }
+
+        .image-sliderObras {
+            aspect-ratio: 16 / 9; /* Ajusta a proporção para manter um tipo de frame */
+            width: 60vw; /* Ajusta a largura */
+            height: auto;
+            max-width: 100%; /* Nunca ultrapassa o tamanho da tela */
+            margin: auto;
+            /* overflow: hidden; */
+            position: relative;
+            background:#333; /* Adiciona fundo para verificar limites */
+            display: flex;
+            flex-direction: row;
+            object-fit: cover; /* Ajusta o conteúdo para preencher o espaço sem distorção */ 
+            overflow: hidden; /* Evita que imagens maiores saiam do contêiner */
+            background-color:#0e9637 ;
+        }
+       
+
+        .arrow{
+            font-size: 24px;
+            cursor: pointer;
+            background: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente */
+            border: 1px solid #ccc;
+            border-radius: 50%;
+            padding: 5px;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10;
+            /* background-color: #e40c71; */
+            border: none;
+        }
+
+        #prev {
+            left: 10px;
+        }
+
+        #next {
+            right: 10px;
+        }
+
+        #prevObra {
+            left: 10px;
+        }
+
+        #nextObra {
+            right: 10px;
+        }
+
+        /* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+        .image-slider {
+            display: flex;
+            align-items: center;
+        }
+
+        .image-sliderObras {
+            display: flex;
+            align-items: center;
+        }
+
+
+        .arrow {
+            background-color: #fff;
+            border: none;
+            font-size: 24px;
+            /* cursor: pointer; */
+            padding: 10px;
+            border-radius: 50%;
+            margin: 0 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
+            background-color: #e40c71;
+        }
+
+        .arrow:hover {
+            background-color: #f0f0f0;
+        }
+
+        #image {
+            border: 2px solid #ddd;
+            border-radius: 8px;
+        }
+
+    /* } */

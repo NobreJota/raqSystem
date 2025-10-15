@@ -1,0 +1,162 @@
+ @media (max-width: 512px) {
+            .navbar {
+                padding: 4vw 0 2vw 0;
+            }
+            
+            .nav-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 2vw;
+                background-color:blueviolet;
+            }
+            .nav-links {
+                gap: 6vw;
+                font-size: 4vw;
+            }
+            .nav-links a {
+                font-size: 3vw;
+            }
+            .logo {
+                height: 94px;
+                max-width: 80%;
+                margin-bottom: 2vw;
+            }
+            /* //////////////////////////////////////////////// */
+            /* Descrição Principal */
+            .hero {
+                padding: 10vw 4vw 8vw 4vw;
+            }
+            .hero-content {
+                flex-direction: column-reverse;
+                align-items: center;
+                gap: 4vw;
+            }
+            .hero-left, .hero-right {
+                align-items: center;
+                text-align: center;
+            }
+            .hero-title {
+                font-size: 7vw;
+                margin-top: 2vw;
+            }
+            .hero-desc {
+                font-size: 4vw;
+                margin-bottom: 5vw;
+            }
+            .hero-btn {
+                font-size: 4vw;
+                padding: 3vw 8vw;
+                margin-bottom: 5vw;
+            }
+            .video-item iframe, .video-item video {
+                height: 40vw;
+                background-color: #070700;
+            }
+            .empresa-section {
+                padding: 10vw 4vw 8vw 4vw;
+            }
+            .empresa-content {
+                flex-direction: column;
+                align-items: center;
+                gap: 5vw;
+                width: 100%;
+                max-width: 100%;
+            }
+            .empresa-img-box {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                margin-bottom: 4vw;
+            }
+            .empresa-img {
+                max-width: 95vw;
+                border-radius: 2vw;
+                margin-bottom: 0;
+            }
+            .empresa-text-box {
+                width: 100%;
+                padding: 0 2vw;
+            }
+            .empresa-title {
+                font-size: 6vw;
+                margin-bottom: 2vw;
+                text-align: left;
+            }
+            .empresa-text {
+                font-size: 4vw;
+                padding-bottom: 2vw;
+            }
+            .video-item iframe, .video-item video {
+                height: 32vw;
+            }
+
+            .products{
+                background-color: aqua;
+                height: 32vh;
+                width: 50vw;
+                flex-direction: column;
+                align-items: center;
+                gap: 5vw;
+                
+                max-width: 100%;
+                padding: 10px;
+            }
+
+            .products-title {
+                font-size: 6vw;
+                margin-bottom: 4vw;
+                background-color:transparent;
+                color: blue;
+                display: flex;flex-direction: row;justify-content: space-around;
+            }
+
+           .treino{
+                background-color: aqua;
+                height: 32vh;
+            }
+
+            .treino-title{
+                font-size: 6vw;
+                margin-bottom: 4vw;
+                background-color:transparent;
+            }
+
+            .obras{
+                background-color: aqua;
+                height: 32vh;
+            }
+
+            .obras-title{
+                font-size: 6vw;
+                margin-bottom: 4vw;
+                background-color:transparent;
+            }
+                   
+            .image-slider{
+                /* background-color: blue; */
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                width: 70vw;
+                height: auto;
+                /* background-color: blue; */
+                border: transparent;
+            }
+
+            .image-sliderObras{
+                background-color: blue;
+                width: 60vw;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            .videos-title {
+                font-size: 6vw;
+                margin-bottom: 2vw;
+            }
+            .contact-title {
+                font-size: 6vw;
+                margin-bottom: 2vw;
+            }
+        }

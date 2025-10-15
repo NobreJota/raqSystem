@@ -1,0 +1,169 @@
+  @media (max-width: 900px) {
+        .navbar {
+            padding: 2vw 0;
+        }
+
+        .nav-container{
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5vw;
+            background-color:aqua;
+        }
+
+        .nav-links {
+            gap: 4vw;
+            justify-content: center;
+        }
+
+        .logo {
+            height: 32px;
+            max-width: 60%;
+            margin-bottom: 1vw;
+        }
+
+        .hero-content, .empresa-content,.video-grid, .contact-info {
+            width: 98%;
+            max-width: 100%;
+        }
+        .hero-content, .empresa-content {
+            flex-direction: column;
+            gap: 2vw;
+        }
+        .hero-left, .hero-right, .empresa-img-box, .empresa-text-box {
+            max-width: 100%;
+            min-width: 0;
+            width: 100%;
+        }
+        .hero-title, .empresa-title, .products-title, .videos-title, .contact-title {
+            font-size: 4vw;
+        }
+        .hero-desc, .empresa-text {
+            font-size: 2.5vw;
+        }
+        .video-item iframe, .video-item video {
+            height: 32vw;
+        
+        }
+
+        .products{
+            /* background: var(--cinza-bg); */
+            width: 50vw;
+            height: auto;
+            padding: .5vw;
+            /* border-top: 2px #ffffff solid; */
+            background-color: red;
+            border-bottom: .8px gray solid;
+        }
+
+        .products-title{
+            color: var(--azul);
+            font-size: 2vw;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 2vw;
+            text-transform: uppercase;
+            line-height: 0.8em;
+        }
+
+        .treino,.obras{
+            background: var(--cinza-bg);
+            width: 70vw;
+            height: auto;
+            padding: 5vw 0;
+            /* border-top: 2px #ffffff solid; */
+            /*background-color: red;*/
+            border-bottom: .8px gray solid;
+        }
+
+        .treino-title,.obras-title {
+            color: var(--azul);
+            font-size: 2vw;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 2vw;
+            text-transform: uppercase;
+            line-height: 0.8em;
+        }
+        
+        .image-slider {
+            /* aspect-ratio: 16 / 9; */
+            /* Ajusta a proporção para manter um tipo de frame */
+            width: 40vw; /* Ajusta a largura */
+            height: auto;
+            max-width: 100%; /* Nunca ultrapassa o tamanho da tela */
+            margin: auto;
+            /* overflow: hidden; */
+            position: relative;
+            /* background:#e40a0a;  */
+            padding: 5px;
+            /* Adiciona fundo para verificar limites */
+            display: flex;
+            flex-direction: row;
+            object-fit: cover; /* Ajusta o conteúdo para preencher o espaço sem distorção */ 
+            overflow: hidden; /* Evita que imagens maiores saiam do contêiner */
+        }
+
+        .image-sliderObras {
+            /* aspect-ratio: 16 / 9; */
+            /* Ajusta a proporção para manter um tipo de frame */
+            width: 50vw; /* Ajusta a largura */
+            height: auto;
+            max-width: 100%; /* Nunca ultrapassa o tamanho da tela */
+            margin: auto;
+            /* overflow: hidden; */
+            position: relative;
+            /* background:#333;  */
+            /* padding: 5px; */
+            /* Adiciona fundo para verificar limites */
+            display: flex;
+            flex-direction: row;
+            object-fit: cover; /* Ajusta o conteúdo para preencher o espaço sem distorção */ 
+            overflow: hidden; /* Evita que imagens maiores saiam do contêiner */
+        }
+         /* AQUI PARA BAIXO */
+        .hero {
+        padding: 8vw 0 8vw;
+        }
+
+        .hero-title {
+        font-size: clamp(24px, 6vw, 34px);
+        }
+        .hero-desc {
+        font-size: clamp(14px, 3.6vw, 18px);
+        }
+        .hero-btn {
+        padding: 12px 22px;
+        font-size: clamp(14px, 3.8vw, 18px);
+        border-radius: 999px;
+        }
+
+        .empresa-title {
+        font-size: clamp(20px, 5.2vw, 28px);
+        }
+        .empresa-text {
+        font-size: clamp(14px, 3.6vw, 18px);
+        }
+
+        .products, .treino, .obras, .videos, .contact {
+        padding: 8vw 0;
+        }
+
+        /* Slider fica um pouco mais alto em telas menores (mais agradável visualmente) */
+        .image-slider,
+        .image-sliderObras {
+        width: 94vw;
+        aspect-ratio: 4 / 3;
+        border-radius: 12px;
+        }
+
+        /* Botões mais perto da borda e maiores no toque */
+        #prev, #prevObra { left: 10px; }
+        #next, #nextObra { right: 10px; }
+
+        .nav-links a {
+        font-size: clamp(12px, 2.8vw, 16px);
+        }
+        .logo {
+        height: clamp(40px, 10vw, 64px);
+        }
+}
