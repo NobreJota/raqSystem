@@ -1,0 +1,145 @@
+@media (max-width: 512px) {
+    .navbar {
+        padding: 4vw 0 2vw 0;
+    }
+    .nav-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 2vw;
+    }
+    .nav-links {
+        gap: 6vw;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .nav-links a {
+        font-size: clamp(13px, 4vw, 15px);
+    }
+    .logo {
+        height: 94px;
+        max-width: 80%;
+        margin-bottom: 2vw;
+    }
+    .hero {
+        padding: 10vw 4vw 8vw 4vw;
+    }
+    .hero-content {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 4vw;
+    }
+    .hero-left, .hero-right {
+        align-items: center;
+        text-align: center;
+    }
+    .hero-title {
+        font-size: 7vw;
+        margin-top: 2vw;
+    }
+    .hero-desc {
+        font-size: 4vw;
+        margin-bottom: 5vw;
+    }
+    .hero-btn {
+        font-size: 4vw;
+        padding: 3vw 8vw;
+        margin-bottom: 5vw;
+    }
+    .empresa-section {
+        padding: 10vw 4vw 8vw 4vw;
+    }
+    .empresa-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 5vw;
+        width: 100%;
+        max-width: 100%;
+    }
+    .empresa-img-box {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 4vw;
+    }
+    .empresa-img {
+        max-width: 95vw;
+        border-radius: 2vw;
+        margin-bottom: 0;
+    }
+    .empresa-text-box {
+        width: 100%;
+        padding: 0 2vw;
+    }
+    .empresa-title {
+        font-size: 6vw;
+        margin-bottom: 2vw;
+        text-align: left;
+    }
+    .empresa-text {
+        font-size: 4vw;
+        padding-bottom: 2vw;
+    }
+    .video-item iframe, .video-item video {
+        height: 32vw;
+        background-color: #070700;
+    }
+    .products {
+        background: var(--cinza-bg);
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
+    .products-title {
+        font-size: clamp(18px, 6vw, 26px);
+        margin-bottom: 4vw;
+        color: var(--azul);
+        text-align: center;
+    }
+    .treino {
+        background: var(--cinza-bg);
+        height: auto;
+    }
+    .treino-title {
+        font-size: clamp(18px, 6vw, 26px);
+        margin-bottom: 4vw;
+        color: var(--azul);
+        text-align: center;
+    }
+    .obras {
+        background: var(--cinza-bg);
+        height: auto;
+    }
+    .obras-title {
+        font-size: clamp(18px, 6vw, 26px);
+        margin-bottom: 4vw;
+        color: var(--azul);
+        text-align: center;
+    }
+    .image-sliderObras {
+        width: 90vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .videos-title {
+        font-size: 6vw;
+        margin-bottom: 2vw;
+    }
+    .contact-title {
+        font-size: 6vw;
+        margin-bottom: 2vw;
+    }
+    /* Slider de produto maior no mobile pra ver os números das medidas */
+    .image-slider {
+        width: 98vw;
+        height: 85vh;
+        gap: 6px;
+        padding: 0 4px;
+        border-radius: 8px;
+    }
+    .arrow {
+        width: 36px;
+        height: 36px;
+        font-size: 16px;
+    }
+}

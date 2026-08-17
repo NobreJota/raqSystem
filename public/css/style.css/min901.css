@@ -1,0 +1,40 @@
+@media (min-width: 901px) {
+    .nav-container {
+        background-color: transparent;
+    }
+    .videos-title {
+        font-size: 2vw;
+        margin-bottom: 2vw;
+    }
+    .video-grid {
+        width: 50%;
+        max-width: 600px;
+        margin: 0 auto;
+        grid-template-columns: 1fr;
+        gap: 2vw;
+    }
+    .video-item iframe, .video-item video {
+        height: 320px;
+        border-radius: 1vw;
+    }
+    .contact-title {
+        font-size: 2vw;
+        margin-bottom: 2vw;
+    }
+    .contact-info {
+        width: 40%;
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 0;
+    }
+    .contact-item {
+        font-size: 1.3vw;
+        margin: 2vw 0;
+    }
+    .contact-item i {
+        font-size: 2vw;
+    }
+    .contact-item a {
+        font-size: 1.3vw;
+    }
+}
