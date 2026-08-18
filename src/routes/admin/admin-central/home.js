@@ -16,7 +16,7 @@ router.get('/',(req,res)=>{
    console.log('______________________________________');
    console.log(' ');
    console.log(' [ 1800 ]');
-   console.log(' origem views :quando usuário digita a URL "rotaes.com.br" ');
+   console.log(' origem views :quando usuário digita a URL "www.raqsystem.com.br" ');
    console.log(' origem route : _admin/admin-central/home.js/get("/")');
    console.log(' obs : página do site HOME');
    console.log('');
@@ -24,7 +24,7 @@ router.get('/',(req,res)=>{
    console.log('');
    console.log('');
    //res.render("site/home/grid-home",{ layout:'site/home/home.handlebars'});
-   res.render("site/smart/index",{ layout:'site/smart/indexHtml.html'});
+   res.render("site/indexHtml", { layout: false });
 })
   
 module.exports=router

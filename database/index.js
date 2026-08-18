@@ -9,7 +9,7 @@ require('dotenv').config({path:'./.env'});
             {useNewUrlParser:true,
         }).then(()=>{
             console.log('___________________________________________________________');
-            console.log("Conexão com MongoDB- Rotaes realizada com sucesso!!!");
+            console.log("Conexão com MongoDB- realizada com sucesso!!!");
             urr=`${process.env.DB_URL}`;
             console.log('   URL :',urr);
             console.log('___________________________________________________________');
@@ -30,7 +30,7 @@ require('dotenv').config({path:'./.env'});
                 useNewUrlParser: true,
                 useUnifiedTopology: true,
             }).then(()=>{
-                console.log("Conexão com MongoDB-?????Loja Hum realizada com sucesso!!!")
+                console.log("Conexão com MongoDB- realizada com sucesso!!!")
             }).catch((erro)=>{
                 console.log("-production - Error:Não foi possivel conectar ao banco Produção!",erro)
             });

@@ -81,7 +81,7 @@ app.use('/public', express.static('public', {
 // Arquivis estáticos
 app.use(express.static(path.join(__dirname,"public")))
 
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 4050;
 
 //Passport
 app.use(passport.initialize());
