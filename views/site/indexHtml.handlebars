@@ -376,15 +376,16 @@
     <!-- PERTINENTE AO MODAL -->
     <style>
     .modal-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.5);
-      display: none;
-      justify-content: center;
-      align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
     }
 
     .modal-container {
@@ -910,14 +911,19 @@ rows.forEach((row) => {
        modalOverlay.style.display = 'flex';
     });
 
-    closeModalBtn.addEventListener('click', (event) => {
-       modalOverlay.style.display = 'none';
-    });
+   function fecharModal() {
+        modalOverlay.style.display = 'none';
+        const video = document.getElementById('video-passa');
+        video.pause();
+        video.currentTime = 0;
+    }
+
+    closeModalBtn.addEventListener('click', fecharModal);
 
     modalOverlay.addEventListener('click', (event) => {
-      if (event.target === modalOverlay) {
-        modalOverlay.style.display = 'none';
-      }
+    if (event.target === modalOverlay) {
+        fecharModal();
+    }
     });
 </script>
 <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
