@@ -1,30 +1,9 @@
-const express=require('express');
-const router=express.Router();
-const mongoose = require('mongoose');
-const multer = require('multer');
-const path =require('path');
-const fs = require('fs');
+const express = require('express');
+const router = express.Router();
 
-const { eAdmin } = require("../../../../helpers/eAdmin");
-// const { eAdmin } = require("../../helpers/eAdmin")
-const flash = require('connect-flash');
-const console = require('console');
+// Rota principal do site
+router.get('/', (req, res) => {
+    res.render('site/indexHtml', { layout: false });
+});
 
-// 7768
-router.get('/',(req,res)=>{
-   console.log('');
-   console.log('______________________________________');
-   console.log(' ');
-   console.log(' [ 1800 ]');
-   console.log(' origem views :quando usuário digita a URL "www.raqsystem.com.br" ');
-   console.log(' origem route : _admin/admin-central/home.js/get("/")');
-   console.log(' obs : página do site HOME');
-   console.log('');
-   console.log(' destino :site/smart/index.handlebars :: layout:"site/smart/indexHtml.handlebars"');
-   console.log('');
-   console.log('');
-   //res.render("site/home/grid-home",{ layout:'site/home/home.handlebars'});
-   res.render("site/indexHtml", { layout: false });
-})
-  
-module.exports=router
+module.exports = router;
