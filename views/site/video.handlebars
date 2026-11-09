@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recirculação de água quente — Raqsystem</title>
+    <meta name="description" content="Veja como o sistema de recirculação de água quente evita o desperdício de água tratada em edifícios.">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="icon" type="image/jpeg" href="/logo.jpg">
+    <style>
+        :root {
+            --azul: #0F6B47;
+            --azul-escuro: #0A4D37;
+            --cinza-bg: #f4f4f4;
+        }
+        * , *::before, *::after { box-sizing: border-box; }
+        html, body { margin: 0; padding: 0; }
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            background: var(--cinza-bg);
+            color: #222;
+            line-height: 1.7;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background: #fff;
+            border-bottom: 1px solid #e3e3e3;
+            padding: 14px 20px;
+            text-align: center;
+        }
+        header img { height: 46px; width: auto; display: inline-block; }
+
+        main {
+            flex: 1;
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 28px 20px 40px;
+        }
+        h1 {
+            color: var(--azul);
+            font-size: 1.5rem;
+            font-weight: 700;
+            line-height: 1.25;
+            margin: 0 0 6px;
+            text-align: center;
+        }
+        .sub {
+            text-align: center;
+            font-size: .95rem;
+            color: #555;
+            margin: 0 0 22px;
+        }
+        .player {
+            background: #000;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 6px 24px rgba(0,0,0,.16);
+        }
+        .player video { width: 100%; height: auto; display: block; }
+
+        .dado {
+            background: #fff;
+            border-left: 4px solid var(--azul);
+            border-radius: 8px;
+            padding: 16px 18px;
+            margin: 24px 0;
+        }
+        .dado strong { color: var(--azul-escuro); font-size: 1.15rem; }
+        .dado p { margin: 4px 0 0; font-size: .92rem; color: #444; }
+
+        .acoes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+            margin-top: 26px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 13px 22px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: .95rem;
+            text-align: center;
+        }
+        .btn-primario { background: var(--azul); color: #fff; }
+        .btn-secundario { background: #fff; color: var(--azul); border: 1.5px solid var(--azul); }
+
+        footer {
+            background: var(--azul-escuro);
+            color: #fff;
+            text-align: center;
+            padding: 16px 20px;
+            font-size: .82rem;
+        }
+        footer a { color: #fff; }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 1.25rem; }
+            main { padding: 20px 16px 32px; }
+            .btn { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="/"><img src="https://amelia.nyc3.digitaloceanspaces.com/8b68690bf283442dc7a5_logoRaq.jpg" alt="Raqsystem"></a>
+    </header>
+
+    <main>
+        <h1>Recirculação de água quente</h1>
+        <p class="sub">Água quente no ponto em segundos, sem desperdiçar água tratada.</p>
+
+        <div class="player">
+            <video width="100%" height="auto" controls playsinline preload="metadata"
+                   poster="">
+                <source src="https://amelia.nyc3.digitaloceanspaces.com/770dcd8891f6fec7537b_video_02.mp4" type="video/mp4">
+                Seu navegador não suporta vídeos.
+            </video>
+        </div>
+
+        <div class="dado">
+            <strong>Mais de 150.000 litros por mês</strong>
+            <p>É o volume de água tratada que um empreendimento de alto padrão pode descartar no ralo enquanto os moradores esperam a água esquentar.</p>
+        </div>
+
+        <div class="acoes">
+            <a class="btn btn-primario" href="/#contato">Falar com a Raqsystem</a>
+            <a class="btn btn-secundario" href="/">Conhecer o site completo</a>
+        </div>
+    </main>
+
+    <footer>
+        Raqsystem — <a href="/">www.raqsystem.com.br</a>
+    </footer>
+
+</body>
+</html>
