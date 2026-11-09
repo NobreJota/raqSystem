@@ -216,6 +216,7 @@
             width: 100%;
             padding: 10vw 0 10vw 0;
             border-bottom: .8px #0e9637 solid;
+            scroll-margin-top: 120px;
         }
         .videos-title {
             color: var(--azul);
@@ -370,6 +371,17 @@
 
             .icon img {
               max-width: 30px;
+            }
+
+            /* Vídeos empilhados no celular */
+            .video-grid {
+              flex-direction: column !important;
+              width: 94% !important;
+              gap: 6vw;
+            }
+
+            .video-item {
+              padding: 0;
             }
         }
     </style>
